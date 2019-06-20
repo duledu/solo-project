@@ -7,21 +7,29 @@
 body{
   height: 100vh;
 }
+.memory-game{
+
+
+.board-table{
+  margin-top: 150px;
+
+
+}
+
 .board{
   width: 550px;
   height: 500px;
   background: linear-gradient(#4da6ff, #000033 );
   position: absolute;
-  left: 30%;
-  top: 10%;
   box-shadow: 0 0 10px;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
 
 
-}
 
+}
+}
 .memory-card{
   position: relative;
   width: 100px;
@@ -63,4 +71,30 @@ body{
 }
 .flip {
   transform: rotateY(180deg);
+}
+
+.again-button{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+
+@media all and (max-width: 580px) {
+  .memory-game{
+    .board{
+      width: 450px;
+      height: 450px;
+
+      .memory-card{
+        width: 70px;
+        height: 70px;
+        padding: 0;
+
+      }
+    }
+
+  }
+
+
 }
