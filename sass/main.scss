@@ -34,6 +34,15 @@ body{
 
 
 }
+h1{
+  margin-left: 45px;
+  margin-bottom: 20px;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+
+}
 }
 .memory-card{
   position: relative;
@@ -93,8 +102,12 @@ body{
 }
 
 
+
 @media all and (max-width: 580px) {
   .memory-game{
+    h1{
+      font-size: 30px
+    }
     .board{
       width: 450px;
       height: 450px;
@@ -110,7 +123,32 @@ body{
   }
   .again-button{
     margin-left: 110px;
-    
+    top: 50px;
+    left: -10px;
+
+  }
+
+
+}
+
+@media all and (max-width: 499px) {
+  .memory-game{
+    .board{
+      width: 320px;
+      height: 320px;
+
+      .memory-card{
+        width: 45px;
+        height: 45px;
+        padding: 0;
+
+      }
+    }
+
+  }
+  .again-button{
+    margin-left: 110px;
+
   }
 
 

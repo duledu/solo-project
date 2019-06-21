@@ -69,3 +69,17 @@ function Matching() {
      })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+beat();
+
+function beat() {
+  setInterval(function () {
+    $('.game-name').addClass('animated pulse')
+
+  },2000)
+
+  setInterval(function () {
+    $('.game-name').removeClass('animated pulse')
+
+  },5000)
+
+};
