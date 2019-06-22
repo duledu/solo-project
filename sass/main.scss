@@ -141,6 +141,12 @@ h1{
         width: 45px;
         height: 45px;
         padding: 0;
+        .back-face{
+          padding: 0;
+        }
+        .front-face{
+          padding: 0;
+        }
 
       }
     }
