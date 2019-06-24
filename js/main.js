@@ -7,8 +7,9 @@ var hours = 0;
 var displaySeconds = 0;
 var displayMinutes = 0;
 var displayHours = 0;
-var interval = null;
-var status = "stopped";
+var board = $('.board');
+var timeOff = $('.memory-card flip')
+
 
 var cards = document.querySelectorAll('.memory-card');
 
@@ -142,5 +143,27 @@ function time() {
      $('.time').html(displayHours  + ':' + displayMinutes + ':' + displaySeconds);
 };
 
+start();
 
- window.setInterval(time,1000);
+
+function start() {
+  if ($('.board').one("click",function () {
+
+    interval = window.setInterval(time, 1000);
+  })) {
+
+  }
+  else {
+    stop();
+  }
+
+};
+
+
+function stop() {
+  if (timeOff.length === 16) {
+    clearInterval(time)
+
+  }
+
+}
