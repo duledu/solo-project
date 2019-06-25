@@ -9,10 +9,6 @@
 body{
   height: 100vh;
   background: url(../img/svg/body-background.svg) no-repeat center center fixed;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 .memory-game{
@@ -43,7 +39,8 @@ body{
   box-shadow: 0 0 10px;
   display: flex;
   flex-wrap: wrap;
-  perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 
 
 
@@ -70,8 +67,10 @@ h1{
   border: 2px solid white;
   border-radius: 5%;
   box-sizing: border-box;
-  transform: scale(1);
-  transform-style: preserve-3d;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   transition: transform.5s;
 
 
@@ -80,7 +79,8 @@ h1{
     height: 100%;
     padding: 20px;
     position: absolute;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 
 
 
@@ -89,16 +89,21 @@ h1{
   .front-face{
     @extend .back-face;
     background-color:#00004d;
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
   }
 
 }
 .memory-card:active{
-  transform: scale(.95);
+  -webkit-transform: scale(.95);
+          transform: scale(.95);
+  transition: -webkit-transform .2s;
   transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 .flip {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .again-button{
@@ -167,7 +172,7 @@ h1{
 
   }
   .again-button{
-    margin-left: 110px;
+    margin-left: 50px;
 
   }
 
