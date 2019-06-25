@@ -67,6 +67,10 @@ function Matching() {
        oneCard = null;
        secondCard = null;
 
+       if (document.getElementsByClassName('flip').length === 16) {
+           clearInterval(interval)
+       }
+
      }
 
      (function shuffe() {
@@ -152,18 +156,10 @@ function start() {
     interval = window.setInterval(time, 1000);
   })) {
 
+  }else {
+    timeOff.length === 16
+
   }
-  else {
-    stop();
-  }
+
 
 };
-
-
-function stop() {
-  if (timeOff.length === 16) {
-    clearInterval(time)
-
-  }
-
-}
